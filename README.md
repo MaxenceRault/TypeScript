@@ -6,7 +6,7 @@ Rault Maxence
 ## Description
 Une application To-Do List moderne développée en TypeScript, avec une gestion sécurisée des utilisateurs et des tâches.
 
-### .ENV
+## .ENV
 
 Vous modifer l'url de la BDD en fonction de votre local
 
