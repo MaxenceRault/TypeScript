@@ -8,7 +8,7 @@ Une application To-Do List moderne développée en TypeScript, avec une gestion 
 
 ## .ENV
 
-Vous modifer l'url de la BDD en fonction de votre local
+Vous modifiez l'url de la BDD en fonction de votre local
 
 ## Commandes nécessaires
 
