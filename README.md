@@ -6,15 +6,16 @@ Rault Maxence
 ## Description
 Une application To-Do List moderne développée en TypeScript, avec une gestion sécurisée des utilisateurs et des tâches.
 
+### .ENV
+
+Vous modifer l'url de la BDD en fonction de votre local
+
 ## Commandes nécessaires
 
 ### Installation des dépendances
 ```
 npm install 
 ```
-### .ENV
-
-Vous modifer l'url de la BDD en fonction de votre local
 
 ### Configuration de Prisma pour la base de donnée
 lancer laragon ou mamp
