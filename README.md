@@ -14,8 +14,8 @@ npm install
 ```
 
 ### Configuration de Prisma pour la base de donnée
-```
 lancer laragon ou mamp
+```
 npx prisma init
 npx prisma migrate dev --name init
 ```
