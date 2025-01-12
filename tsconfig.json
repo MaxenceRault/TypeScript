@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "outDir": "js",
+      "target": "ES2021",
+      "noEmitOnError": false,
+      "strict": true,
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports": true, // Ajouté
+      "esModuleInterop": true              // Recommandé pour les modules CommonJS
+    },
+    "include": [
+      "src/**/*.ts"
+    ]
+  }
+  

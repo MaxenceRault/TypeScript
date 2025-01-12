@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <!-- Déconnexion -->
+  <button id="logoutButton" class="logout-btn">Déconnexion</button>
+
+  <h1>Mes Tâches</h1>
+
+  <!-- Ajouter une tâche -->
+  <button id="openModalButton" class="add-task-btn">Ajouter une tâche</button>
+
+  <!-- Modal -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <form id="taskForm">
+        <h2>Nouvelle Tâche</h2>
+        <input type="text" id="title" placeholder="Titre" required>
+        <textarea id="description" placeholder="Description" required></textarea>
+        <input type="date" id="deadline" required>
+        <div class="modal-buttons">
+          <button type="submit" class="save-btn">Ajouter</button>
+          <button type="button" id="cancelModalButton" class="cancel-btn">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Liste des tâches -->
+  <div id="taskList" class="task-list">
+    <div id="pendingTasks" class="task-column">
+      <h2>Tâches en attente</h2>
+    </div>
+    <div id="completedTasks" class="task-column">
+      <h2>Tâches terminées</h2>
+    </div>
+  </div>
+
+  <script src="./js/dashboard.js" type="module"></script>
+</body>
+</html>

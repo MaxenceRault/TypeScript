@@ -1,0 +1,251 @@
+/* Style général pour une To-Do List moderne avec animations et contrastes puissants */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://lh3.googleusercontent.com/proxy/U765zHnhuVhqsLF1tpCToXKWy_FZ9I0EIyVOT7utzzUwDL8cS04Kokchlj4yiMv8rcNCvou6Q-wbHXH457Q7gjfdiF52z1At2JoyaZheH1gK');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Bouton de déconnexion */
+button#logoutButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(255, 77, 79, 0.5);
+}
+
+button#logoutButton:hover {
+    transform: scale(1.1);
+    background-color: #e33d40;
+    box-shadow: 0 8px 20px rgba(255, 77, 79, 0.7);
+}
+
+/* Modal pour le formulaire */
+#taskModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#taskModal.active {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#taskModal input,
+#taskModal textarea {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+#taskModal textarea {
+    resize: none;
+    min-height: 80px;
+}
+
+#taskModal button {
+    background: linear-gradient(45deg, #0079bf, #00c6ff);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#taskModal button.cancel {
+    background: #ddd;
+    color: #333;
+}
+
+#taskModal button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 121, 191, 0.5);
+}
+
+/* Bouton pour ouvrir le modal */
+button#openModalButton {
+    background: linear-gradient(45deg, #ff696e, #f59c83);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(255, 154, 158, 0.5);
+}
+
+button#openModalButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 154, 158, 0.7);
+}
+
+/* Liste des tâches avec colonnes */
+#taskList {
+    display: flex;
+    gap: 20px;
+    width: 95%;
+    max-width: 1200px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.task-column {
+    background: linear-gradient(135deg, #f4f5f736, #e1e5ea7c);
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    min-width: 280px;
+}
+
+.task-column h2 {
+    margin: 0 0 15px;
+    font-size: 1.4rem;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.task {
+    background: linear-gradient(135deg, #f397ff8c 30%, #cc97d6a8 60%);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0079bf;
+}
+
+.task p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.task button {
+    background: linear-gradient(45deg, #00b09b, #96c93d);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 176, 155, 0.5);
+}
+
+.task button.delete {
+    background: linear-gradient(45deg, #eb5a46, #ff6b6b);
+}
+
+.task button.delete:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(235, 90, 70, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #taskList {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-column {
+        width: 100%;
+        max-width: none;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+}
