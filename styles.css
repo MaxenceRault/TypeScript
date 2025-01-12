@@ -7,16 +7,21 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background: url('https://lh3.googleusercontent.com/proxy/U765zHnhuVhqsLF1tpCToXKWy_FZ9I0EIyVOT7utzzUwDL8cS04Kokchlj4yiMv8rcNCvou6Q-wbHXH457Q7gjfdiF52z1At2JoyaZheH1gK');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: #ffffff;
   }
   
   .container {
-    background-color: #fff;
+    background: linear-gradient(135deg, #f397ff8c 30%, #cc97d6a8 60%);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
