@@ -12,6 +12,9 @@ Une application To-Do List moderne développée en TypeScript, avec une gestion 
 ```
 npm install 
 ```
+### .ENV
+
+Vous modifer l'url de la BDD en fonction de votre local
 
 ### Configuration de Prisma pour la base de donnée
 lancer laragon ou mamp
